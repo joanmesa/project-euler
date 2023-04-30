@@ -6,28 +6,27 @@
 
 // Al considerar los términos en la sucesión de Fibonacci cuyos valores no superan los cuatro millones, encuentre la suma de los términos de valor par.
 
-const a = limit => {
+const fibonacci = limit => {
     if (limit < 2) return "El limite debe ser mayor a 1";
-    let anterior = 1;
-    let siguiente = 2;
-    let sumando = anterior + siguiente;
-    let numbers = [];
-    while (siguiente < limit) {
-        anterior = siguiente;
-        siguiente = sumando;
-        numbers.push(anterior);
-        numbers.push(siguiente); 
-        anterior = siguiente;
-        siguiente = sumando;
+    let numbers = [1, 2];
+    let suma = 0;
+    while (suma < limit) {
+        let anterior = numbers[numbers.length - 2];
+        let siguiente = numbers[numbers.length - 1];
+        suma = anterior + siguiente;
+        numbers.push(suma);
     }
-
     return numbers;
 }
 
+let numFibonacci = fibonacci(4000000);
+numFibonacci.pop();
+// console.log(numFibonacci);
+const sumaFibonacci = listOfNumbers => {
+    let listParNumbers = listOfNumbers
+        .filter(num => num % 2 == 0)
+        .reduce((total, num) => total + num, 0);
 
-console.log(a(100));
-
-
-1 2
-
-X -> 1 + 2 = 3
+    return listParNumbers;
+}
+console.log(sumaFibonacci(numFibonacci));
