@@ -21,7 +21,7 @@ const fibonacci = limit => {
 
 let numFibonacci = fibonacci(4000000);
 numFibonacci.pop();
-// console.log(numFibonacci);
+
 const sumaFibonacci = listOfNumbers => {
     let listParNumbers = listOfNumbers
         .filter(num => num % 2 == 0)
