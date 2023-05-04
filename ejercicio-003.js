@@ -12,17 +12,28 @@ const primo = number => {
     return true;
 }
 
+
 const listPrime = limit => {
     const primes = [];
-    for (let i = 0; i <= limit; i++) {
-        // if (primo(i)) primes.push(i);
-        if (primo(i) && limit % i == 0) {
-            console.log(i);
-        }
+    let i = 2;
+    while ((i < limit) && (limit % i == 0)) {
+        console.log("xx " + i);
+        i++;
     }
-    return primes;
+
+    return i;
 }
 
-console.log(listPrime(65678900));
+//ALORITMO SI ES MENOR QUE DECRECA Y PREUNTE Y PARE
+// const listPrime = limit => {
+//     const primes = [];
+//     for (let i = 0; i <= limit; i++) {
+//         // if (primo(i)) primes.push(i);
+//         if (primo(i) && (limit % i == 0)) {
 
-assssssssszzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzjj}vmmmvm}m}vvm}}mvv}mvm}vm}}}}}}}}vm}}mv7{7{{7<{7{7<{7<{7<{7<{<}}}}}}}}}
+//         }
+//     }
+//     return "termine";
+// }
+
+console.log(listPrime(13195));

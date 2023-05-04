@@ -15,29 +15,3 @@ const numero = () => {
 }
 
 console.log(numero());
-
-
-
-// console.log(2025 / 1);
-
-// const a = [1, 1, 2, 1, 1];
-
-
-// b = a.every(num => num === 1);
-// console.log(b);
-
-
-
-// const xx = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// xx.forEach(n => {
-//     console.log(2519 % n);
-// });
-
-// const ff = xx.every(n => 2519 % n === 0);
-// console.log(ff);
-
-// const todos = shophing.every(shop => shop.precio === 10101);
-// console.log(todos);
-
-
