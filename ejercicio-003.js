@@ -12,6 +12,7 @@ const primo = number => {
     return true;
 }
 
+console.log(primo(4));
 
 const listPrime = limit => {
     const primes = [];
