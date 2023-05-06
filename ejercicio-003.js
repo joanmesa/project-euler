@@ -12,17 +12,19 @@ const primo = number => {
     return true;
 }
 
-console.log(primo(4));
-
 const listPrime = limit => {
     const primes = [];
     let i = 2;
-    while ((i < limit) && (limit % i == 0)) {
-        console.log("xx " + i);
-        i++;
+    // while ((i < limit) && (limit % i == 0)) {
+    //     console.log("xx " + i);
+    //     i++;
+    // }
+    for (let i = 2; i < limit; i++) {
+        if (!(primo(i) && (limit % i === 0))) {
+            continue;
+        }
+        console.log(i);
     }
-
-    return i;
 }
 
 //ALORITMO SI ES MENOR QUE DECRECA Y PREUNTE Y PARE
@@ -37,4 +39,4 @@ const listPrime = limit => {
 //     return "termine";
 // }
 
-console.log(listPrime(13195));
+console.log(listPrime(600851475143));
